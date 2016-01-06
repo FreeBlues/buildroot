@@ -17,7 +17,20 @@ chmod 777 ./rootfs.yaffs2img
 mv ./rootfs.yaffs2img ./rootfs.yaffs2.img
 ```
 
+Put the `rootfs.yaffs2.img` to a `tftp` server, for example, the server IP is `192.168.99.209`.
+
 Reboot loongson 1C board, press `spacebar` to enter `PMON`
+
+##  Commands
+
+```
+ifup syn0
+ifaddr syn0 192.168.99.161
+ping 192.168.99.209
+mtd_erase /dev/mtd1
+devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
+set append 'root=/dev/mtdblock1 console=ttyS2,115200 rootfstype=yaffs2'
+```
 
 ##  Operation log
 
