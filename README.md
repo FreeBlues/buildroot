@@ -1,6 +1,6 @@
 # Build a rootfs for loongson LS1C0300A
 
-##  Commands  
+##  Buildroot Commands  
 ```
 git clone https://github.com/FreeBlues/buildroot
 cd buildroot
@@ -21,7 +21,7 @@ Put the `rootfs.yaffs2.img` to a `tftp` server, for example, the server IP is `1
 
 Reboot loongson 1C board, press `spacebar` to enter `PMON`
 
-##  Commands
+##  PMON Commands
 
 ```
 ifup syn0
@@ -32,7 +32,7 @@ devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
 set append 'root=/dev/mtdblock1 console=ttyS2,115200 rootfstype=yaffs2'
 ```
 
-##  Operation log
+##  PMON Operation log
 
 ```
 PMON> ifup syn0
