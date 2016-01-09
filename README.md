@@ -66,6 +66,11 @@ PMON> devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
 PMON> reboot
 ```
 
+##  Loongson LS1C chip infomation
+
+[Loongson 1C User Manual V1.0](http://www.loongson.cn/uploadfile/cpumanual/Loongson1C_user_manual_en_v1.0.pdf)
+[Loongson 1C Data Sheet V1.0](http://www.loongson.cn/uploadfile/cpumanual/Loongson1C_datasheet_en_v1.0.pdf)
+
 ---
 
 # 为龙芯 LS1C0300A 构建根文件系统
@@ -136,6 +141,10 @@ PMON> devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
 PMON> reboot
 ```
 
+## Loongson LS1C0300A 芯片资料
+
+[龙芯1C处理器用户手册](http://www.loongson.cn/uploadfile/cpu/1C/Loongson_1C300_user.pdf)
+[龙芯1C处理器数据书册](http://www.loongson.cn/uploadfile/cpu/1C/Loongson_1C300_data.pdf)
 
 ---
 
