@@ -34,7 +34,7 @@ devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
 set append 'root=/dev/mtdblock1 console=ttyS2,115200 rootfstype=yaffs2'
 ```
 
-##  PMON Operation log
+##  PMON Operation Log
 
 ```
 PMON> ifup syn0
@@ -66,7 +66,7 @@ PMON> devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
 PMON> reboot
 ```
 
-##  Loongson LS1C chip infomation
+##  Loongson LS1C Chipset Infomation
 
 - [Loongson 1C User Manual V1.0](http://www.loongson.cn/uploadfile/cpumanual/Loongson1C_user_manual_en_v1.0.pdf)    
 - [Loongson 1C Data Sheet V1.0](http://www.loongson.cn/uploadfile/cpumanual/Loongson1C_datasheet_en_v1.0.pdf)
