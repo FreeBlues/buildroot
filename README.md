@@ -89,8 +89,8 @@ PMON> reboot
 |功耗|0.5W|
 |浮点单元|64位|
 |内存控制器|	8/16位SDRAM|
-|I/O接口|	8/16位SRAM、NAND、I2S/AC97、LCD、MAC、USB、OTG、\
-SPI、I2C、UART、PWM、CAN、SDIO、ADC|
+|I/O接口|	8/16位SRAM、NAND、I2S/AC97、LCD、MAC、USB、OTG、
+|       |SPI、I2C、UART、PWM、CAN、SDIO、ADC|
 |流水线|	5|
 |微体系结构|	双发射乱序执行GS232|
 |晶体管数|	11,100,000|
