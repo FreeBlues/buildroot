@@ -75,7 +75,7 @@ PMON> reboot
 
 # 为龙芯 LS1C0300A 构建根文件系统
 
-本项目以[基础版本-rootfs]()为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox配置文件]()和[板上开发环境-rootfs配置文件](), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
+本项目以[基础版本-rootfs](./configs/loongson1c_smartloong_defconfig)为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox配置文件](./package/busybox/config-busybox)和[板上开发环境-rootfs配置文件](./configs/loongson-rootfs-config), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
 
 已经构建好的 `rootfs` 镜像可以到百度网盘[rootfs.yaffs2.img](http://pan.baidu.com/s/1qXt9f7u)下载, 文件大小为 `76,946,496` 字节, 大约 `76M`.
 
