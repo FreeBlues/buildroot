@@ -82,7 +82,7 @@ PMON> reboot
 `龙芯1C` 是基于 `GS232` 处理器核的高性价比单芯片系统，可应用于工业控制及物联网等领域。`龙芯1C` 包含浮点处理单元，支持多种类型的内存，支持高容量的 `MLC NAND Flash`。
 `龙芯1C` 为开发者提供了丰富的外设接口及片上模块，包括 `Camera` 控制器、`USB OTG` 及 `USB HOST` 接口、`AC97/I2S` 控制器、`LCD` 控制器、`SPI` 接口、`UART` 接口等，提供足够的计算能力和多应用的连接能力。
 
-|项目|参数|
+| 项目 | 参数 |
 | ------------ | ------------- |
 |内核|GS232|
 |主频|300MHz|
@@ -107,14 +107,13 @@ PMON> reboot
 
 ### busybox 新增了如下内容:
 
--     dpkg
--     dkpg-deb
--     mkfs.vfat
--     mkfs.ext2
--     mount.exfat
--     mount.exfat-fuse
--     nandwrite
-
+- dpkg
+- dkpg-deb
+- mkfs.vfat
+- mkfs.ext2
+- mount.exfat
+- mount.exfat-fuse
+- nandwrite
 - 应该把 bash 加进来
 - 应该把 modprobe 加进来
 
