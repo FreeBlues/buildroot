@@ -75,12 +75,56 @@ PMON> reboot
 
 # 为龙芯 LS1C0300A 构建根文件系统
 
-##  Buildroot 命令
+本项目以[基础版本-busybox]()和[基础版本-rootfs]()为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox配置文件]()和[板上开发环境-rootfs配置文件](), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
 
+##  板上开发环境Busybox 和根文件系统的新增特性:
+
+### busybox 新增了如下内容:
+
+-     dpkg
+-     dkpg-deb
+-     mkfs.vfat
+-     mkfs.ext2
+-     mount.exfat
+-     mount.exfat-fuse
+-     nandwrite
+
+应该把 bash 加进来
+应该把 modprobe 加进来
+
+### rootfs 新增了如下内容:
+* 程序:
+  -     lua
+  -     make
+  -     tmux
+  -     git
+  -     curl
+  -     tree
+  -     htop
+  -     fbterm
+  -     at
+  -     nano
+  -     openssh
+  -     openssl
+  -     tufted
+  -     sudo
+  -     wget  —busybox版本不太好用, 准备去掉
+  -     ipkg-cl     —没搞清楚怎么用, 准备去掉
+
+* 库:
+  -     libmpc
+  -     libgpm
+  -     libmpfr
+  -     libreadline
+
+##  构建板上开发环境的 Buildroot 命令
+
+先克隆本项目, 然后分别配置 `busybox` 和 `rootfs`, 最后开始构建, 在我的机器上大概需要接近2小时.
 ```
 git clone https://github.com/FreeBlues/buildroot
 cd buildroot
-cp ./configs/loongson1c_smartloong_defconfig ./.config
+cp ./configs/loongson-config ./.config
+make busybox-menuconfig
 make menuconfig
 make
 ```
