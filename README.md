@@ -190,6 +190,10 @@ PMON> reboot
 - [龙芯1C处理器用户手册](http://www.loongson.cn/uploadfile/cpu/1C/Loongson_1C300_user.pdf)    
 - [龙芯1C处理器数据书册](http://www.loongson.cn/uploadfile/cpu/1C/Loongson_1C300_data.pdf)
 
+##  感谢
+
+本项目 fork 自 https://github.com/pengphei/buildroot ,使用了该项目提供的配置文件作为基础版本.
+
 ---
 
 Buildroot is a simple, efficient and easy-to-use tool to generate embedded
