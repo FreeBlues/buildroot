@@ -77,9 +77,7 @@ PMON> reboot
 
 本项目以[基础版本-rootfs](./configs/loongson1c_smartloong_defconfig)为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox配置文件](./package/busybox/config-busybox)和[板上开发环境-rootfs配置文件](./configs/loongson-rootfs-config), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
 
-已经构建好的 `rootfs` 镜像可以到百度网盘[rootfs.yaffs2.img](http://pan.baidu.com/s/1qXt9f7u)下载, 文件大小为 `76,946,496` 字节, 大约 `76M`.
 
-如果想要自己构建, 可以按照下面的操作步骤进行.
 
 ##  板上开发环境Busybox 和根文件系统的新增特性:
 
@@ -120,6 +118,12 @@ PMON> reboot
   -     libgpm
   -     libmpfr
   -     libreadline
+    
+##  直接下载构建好的 rootfs 镜像
+
+已经构建好的 `rootfs` 镜像可以到百度网盘[rootfs.yaffs2.img](http://pan.baidu.com/s/1qXt9f7u)下载, 文件大小为 `76,946,496` 字节, 大约 `76M`.
+
+如果想要自己构建, 可以按照下面的操作步骤进行.
 
 ##  构建板上开发环境的 Buildroot 命令
 
@@ -142,11 +146,11 @@ mv ./rootfs.yaffs2img ./rootfs.yaffs2.img
 
 把生成的 `rootfs.yaffs2.img` 文件放到一个 `tftp` 服务器上, 例如, 这里的服务器 `IP`是 `192.168.99.209`.
 
-重启龙芯 1C 开发板, 按下`空格`键, 进入 `PMON` 界面
-
-##  PMON 命令
+##  用 PMON 命令把 rootfs 镜像刷入开发板
 
 - 注意: 一定要先执行 `mtd_erase /dev/mtd1`, 才可以执行 `devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw`, 否则很容易在你的 `NAND` 闪存上出现坏块.
+
+重启龙芯 1C 开发板, 按下`空格`键, 进入 `PMON` 界面, 执行如下命令:
 
 ```
 ifup syn0
