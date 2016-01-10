@@ -75,11 +75,10 @@ PMON> reboot
 
 # 为龙芯 LS1C0300A 构建根文件系统
 
-本项目以[基础版本-rootfs](./configs/loongson1c_smartloong_defconfig)为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox配置文件](./package/busybox/config-busybox)和[板上开发环境-rootfs配置文件](./configs/loongson-rootfs-config), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
+本项目以[基础版本-rootfs-配置文件](./configs/loongson1c_smartloong_defconfig)为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox-配置文件](./package/busybox/config-busybox)和[板上开发环境-rootfs-配置文件](./configs/loongson-rootfs-config), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
 
 
-
-##  板上开发环境Busybox 和根文件系统的新增特性:
+##  板上开发环境 Busybox 和 rootfs 的新增特性(和基础版本比较):
 
 ### busybox 新增了如下内容:
 
@@ -91,8 +90,8 @@ PMON> reboot
 -     mount.exfat-fuse
 -     nandwrite
 
-应该把 bash 加进来
-应该把 modprobe 加进来
+- 应该把 bash 加进来
+- 应该把 modprobe 加进来
 
 ### rootfs 新增了如下内容:
 * 程序:
@@ -127,7 +126,7 @@ PMON> reboot
 
 ##  构建板上开发环境的 Buildroot 命令
 
-先克隆本项目, 然后分别配置 `busybox` 和 `rootfs`, 最后开始构建, 在我的机器上大概需要接近2小时.
+先克隆本项目, 然后分别配置 `busybox` 和 `rootfs`, 最后开始构建, 如果是首次构建, 由于需要下载很多东西, 构建时间比较长, 如果所有包都已经下载完成, 再进行构建的话, 在我的机器上大概需要接近2小时.
 ```
 git clone https://github.com/FreeBlues/buildroot
 cd buildroot
