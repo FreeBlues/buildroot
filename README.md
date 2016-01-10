@@ -145,13 +145,13 @@ PMON> reboot
     
 ##  直接下载构建好的 rootfs 镜像
 
-已经构建好的 `rootfs` 镜像可以到百度网盘[rootfs.yaffs2.img](http://pan.baidu.com/s/1qXt9f7u)下载, 文件大小为 `76,946,496` 字节, 大约 `76M`.
+如果你想直接使用已经构建好的 `rootfs` 镜像, 可以到百度网盘[rootfs.yaffs2.img](http://pan.baidu.com/s/1qXt9f7u)下载, 文件大小为 `76,946,496` 字节, 大约 `76M`.
 
 如果想要自己构建, 可以按照下面的操作步骤进行.
 
 ##  构建板上开发环境的 Buildroot 命令
 
-先克隆本项目, 然后分别配置 `busybox` 和 `rootfs`, 最后开始构建, 如果是首次构建, 由于需要下载很多东西, 构建时间比较长, 如果所有包都已经下载完成, 再进行构建的话, 在我的机器上大概需要接近2小时.
+先克隆项目到本地, 然后分别配置 `busybox` 和 `rootfs`, 最后开始构建, 如果是首次构建, 由于需要下载较多包, 构建时间比较长, 如果所有包都已经下载完成, 再进行构建的话, 在我的机器上大概需要接近2小时.
 ```
 git clone https://github.com/FreeBlues/buildroot
 cd buildroot
