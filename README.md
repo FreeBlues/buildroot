@@ -77,31 +77,7 @@ PMON> reboot
 
 本项目以[基础版本-rootfs-配置文件](./configs/loongson1c_smartloong_defconfig)为基础配置文件, 在这两个基础版本的配置文件基础上进行裁剪得到[板上开发环境-busybox-配置文件](./package/busybox/config-busybox)和[板上开发环境-rootfs-配置文件](./configs/loongson-rootfs-config), 我们后续讨论的都是基于这两个开发环境配置文件构建生成的 `rootfs` 镜像.
 
-##  龙芯 LS1C 芯片简介
 
-`龙芯1C` 是基于 `GS232` 处理器核的高性价比单芯片系统，可应用于工业控制及物联网等领域。`龙芯1C` 包含浮点处理单元，支持多种类型的内存，支持高容量的 `MLC NAND Flash`。
-`龙芯1C` 为开发者提供了丰富的外设接口及片上模块，包括 `Camera` 控制器、`USB OTG` 及 `USB HOST` 接口、`AC97/I2S` 控制器、`LCD` 控制器、`SPI` 接口、`UART` 接口等，提供足够的计算能力和多应用的连接能力。
-
-| 项目 | 参数 |
-| ------------ | ------------- |
-|内核|GS232|
-|主频|300MHz|
-|功耗|0.5W|
-|浮点单元|64位|
-|内存控制器|	8/16位SDRAM|
-|I/O接口|	8/16位SRAM、NAND、I2S/AC97、LCD、MAC、USB、
-|       |OTG、SPI、I2C、UART、PWM、CAN、SDIO、ADC|
-|流水线|	5|
-|微体系结构|	双发射乱序执行GS232|
-|晶体管数|	11,100,000|
-|制造工艺|	130nm CMOS|
-|一级指令缓存|	16KB|
-|一级数据缓存|	16KB|
-|片内尺寸|	28.3mm2|
-|引脚数|	176|
-|封装方式|	QFP|
-
-以上信息来自[龙芯官网](http://www.loongson.cn/product/cpu/1/Loongson1C.html)
 
 ##  板上开发环境 Busybox 和 rootfs 的新增特性(和基础版本比较):
 
@@ -215,6 +191,32 @@ PMON> devcp tftp://192.168.99.209/rootfs.yaffs2.img /dev/mtd1 yaf nw
 60001920PMON> set append 'root=/dev/mtdblock1 console=ttyS2,115200 rootfstype=yaffs2'
 PMON> reboot
 ```
+
+##  龙芯 LS1C 芯片简介
+
+`龙芯1C` 是基于 `GS232` 处理器核的高性价比单芯片系统，可应用于工业控制及物联网等领域。`龙芯1C` 包含浮点处理单元，支持多种类型的内存，支持高容量的 `MLC NAND Flash`。
+`龙芯1C` 为开发者提供了丰富的外设接口及片上模块，包括 `Camera` 控制器、`USB OTG` 及 `USB HOST` 接口、`AC97/I2S` 控制器、`LCD` 控制器、`SPI` 接口、`UART` 接口等，提供足够的计算能力和多应用的连接能力。
+
+| 项目 | 参数 |
+| ------------ | ------------- |
+|内核|GS232|
+|主频|300MHz|
+|功耗|0.5W|
+|浮点单元|64位|
+|内存控制器|	8/16位SDRAM|
+|I/O接口|	8/16位SRAM、NAND、I2S/AC97、LCD、MAC、USB、
+|       |OTG、SPI、I2C、UART、PWM、CAN、SDIO、ADC|
+|流水线|	5|
+|微体系结构|	双发射乱序执行GS232|
+|晶体管数|	11,100,000|
+|制造工艺|	130nm CMOS|
+|一级指令缓存|	16KB|
+|一级数据缓存|	16KB|
+|片内尺寸|	28.3mm2|
+|引脚数|	176|
+|封装方式|	QFP|
+
+以上信息来自[龙芯官网](http://www.loongson.cn/product/cpu/1/Loongson1C.html)
 
 ## Loongson LS1C0300A 芯片资料
 
